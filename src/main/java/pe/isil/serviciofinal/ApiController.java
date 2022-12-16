@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("")
+@RequestMapping("/api/v1")
 public class ApiController {
     @Autowired
     private RestTemplate restTemplate;
@@ -19,14 +19,14 @@ public class ApiController {
     private static String urlPokemon="https://pokeapi.co/api/v2/pokemon/{1}";
 
     @GetMapping
-    @RequestMapping("/api/v1/perros/razas")
+    @RequestMapping("/perros/razas")
     public Object getRazas() {
         ApiResponse response = restTemplate.getForObject(url, ApiResponse.class);
         return response;
     }
 
     @GetMapping
-    @RequestMapping("/api/v1/pokemon/get-all")
+    @RequestMapping("/pokemon/get-all")
     public List<PokemonResponse> obtenerPokemons() {
 
         PokemonResponse objeto;
