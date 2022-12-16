@@ -1,4 +1,4 @@
-package pe.isil.serviciofinal.pokemon;
+package pe.isil.serviciofinal;
 
 import lombok.Builder;
 import lombok.Data;
